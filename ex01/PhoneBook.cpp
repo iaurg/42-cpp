@@ -111,7 +111,7 @@ void PhoneBook::searchContact()
     while (1) {
         printOut("Enter index to display: ", GREEN);
         std::getline(std::cin, buffer);
-        if (buffer.length() == 0) {
+        if (buffer.empty()) {
             printOut("Index cannot be empty", RED);
             continue;
         }
