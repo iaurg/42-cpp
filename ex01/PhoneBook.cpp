@@ -69,7 +69,6 @@ static void printTableHeader()
     printTableLine("First name");
     printTableLine("Last name");
     printTableLine("Nickname");
-    printTableLine("Secret");
     std::cout << std::endl;
 }
 
@@ -89,7 +88,6 @@ void PhoneBook::_printTableContent(int index, Contact contact)
     printTableLine(_truncate(contact.getValue("firstName")));
     printTableLine(_truncate(contact.getValue("lastName")));
     printTableLine(_truncate(contact.getValue("nickname")));
-    printTableLine(_truncate(contact.getValue("darkestSecret")));
     std::cout << std::endl;
 }
 
