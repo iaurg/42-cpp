@@ -73,6 +73,16 @@ static void printTableHeader()
     std::cout << std::endl;
 }
 
+static void printContactInfo(Contact contact)
+{
+    printOut("First name: " + contact.getValue("firstName"), WHITE);
+    printOut("Last name: " + contact.getValue("lastName"), WHITE);
+    printOut("Nickname: " + contact.getValue("nickname"), WHITE);
+    printOut("Phone number: " + contact.getValue("phoneNumber"), WHITE);
+    printOut("Darkest secret: " + contact.getValue("darkestSecret"), WHITE);
+    std::cout << std::endl;
+}
+
 void PhoneBook::_printTableContent(int index, Contact contact)
 {
     std::cout << std::setw(10) << index << "|";
@@ -114,11 +124,7 @@ void PhoneBook::searchContact()
         }
         break;
     }
-    printOut("First name: " + this->_contacts[index].getValue("firstName"), WHITE);
-    printOut("Last name: " + this->_contacts[index].getValue("lastName"), WHITE);
-    printOut("Nickname: " + this->_contacts[index].getValue("nickname"), WHITE);
-    printOut("Phone number: " + this->_contacts[index].getValue("phoneNumber"), WHITE);
-    printOut("Darkest secret: " + this->_contacts[index].getValue("darkestSecret"), WHITE);
+    printContactInfo(this->_contacts[index]);
 }
 
 void PhoneBook::title(void)
