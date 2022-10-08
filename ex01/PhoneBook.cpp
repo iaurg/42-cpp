@@ -108,7 +108,6 @@ void PhoneBook::searchContact()
             continue;
         }
         index = atoi(buffer.c_str());
-        std::cout << index << std::endl;
         if (index < 0 || index >= PhoneBook::_contactCount) {
             printOut("Invalid index", RED);
             continue;
