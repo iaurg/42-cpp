@@ -4,14 +4,10 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-HumanB::HumanB()
+HumanB::HumanB(std::string name)
+    : _name(name)
 {
 }
-
-HumanB::HumanB( const HumanB & src )
-{
-}
-
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
@@ -21,35 +17,22 @@ HumanB::~HumanB()
 {
 }
 
-
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
-
-HumanB &				HumanB::operator=( HumanB const & rhs )
-{
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
-}
-
-std::ostream &			operator<<( std::ostream & o, HumanB const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
-}
-
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
+void HumanB::attack(void) const
+{
+    std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
 
+void HumanB::setWeapon(Weapon& weapon)
+{
+    this->_weapon = &weapon;
+}
 
 /* ************************************************************************** */
