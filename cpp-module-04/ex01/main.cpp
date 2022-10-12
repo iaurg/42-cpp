@@ -15,6 +15,7 @@ int main(void)
         // Create and fill an array of Animals
         const int size = 30;
         const Animal* animals[size];
+
         for (int i = 0; i < size; i++) {
             if (i % 2 == 0)
                 animals[i] = new Dog();
@@ -25,7 +26,7 @@ int main(void)
         // Make all the animals speak
         for (int i = 0; i < size; i++) {
             animals[i]->makeSound();
-            animals[i]->getBrain()->getIdea(i);
+            animals[i]->getBrain().getIdea(i);
         }
 
         // Delete all the animals

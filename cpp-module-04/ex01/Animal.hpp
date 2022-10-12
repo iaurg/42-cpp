@@ -16,10 +16,11 @@ public:
     const std::string getType(void) const;
     void setType(std::string type);
     virtual void makeSound(void) const;
-    virtual Brain* getBrain(void) const = 0;
+    Brain& getBrain(void) const;
 
 protected:
     std::string type;
+    Brain* brain;
 };
 
 std::ostream& operator<<(std::ostream& o, Animal const& i);
