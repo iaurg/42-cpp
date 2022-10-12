@@ -16,7 +16,7 @@ public:
     const std::string getType(void) const;
     void setType(std::string type);
     virtual void makeSound(void) const = 0;
-    virtual Brain* getBrain(void) const;
+    virtual Brain* getBrain(void) const = 0;
 
 protected:
     std::string type;
