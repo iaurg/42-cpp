@@ -6,7 +6,9 @@
 
 ClapTrap::ClapTrap()
 {
-    std::cout << "[ClapTrap] default constructor called" << std::endl;
+    std::cout << BLUE "[ClapTrap] " << RESET
+              << "default constructor called"
+              << std::endl;
     this->_name = "Default";
     this->_hitPoints = 10;
     this->_energyPoints = 10;
