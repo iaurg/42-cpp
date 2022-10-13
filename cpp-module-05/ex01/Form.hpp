@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 
+class Bureaucrat;
 class Form {
     class GradeTooHighException : public std::exception {
     public:
