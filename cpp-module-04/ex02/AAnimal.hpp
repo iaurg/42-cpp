@@ -22,6 +22,4 @@ protected:
     std::string type;
 };
 
-std::ostream& operator<<(std::ostream& o, AAnimal const& i);
-
 #endif /* ********************************************************** AANIMAL_H */

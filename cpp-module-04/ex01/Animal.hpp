@@ -23,6 +23,4 @@ protected:
     Brain* brain;
 };
 
-std::ostream& operator<<(std::ostream& o, Animal const& i);
-
 #endif /* ********************************************************** ANIMAL_H */

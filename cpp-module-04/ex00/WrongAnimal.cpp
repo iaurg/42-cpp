@@ -38,12 +38,6 @@ WrongAnimal& WrongAnimal::operator=(WrongAnimal const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, WrongAnimal const& i)
-{
-    o << "WrongAnimal of = " << i.getType();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

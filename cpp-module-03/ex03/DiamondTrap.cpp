@@ -55,12 +55,6 @@ DiamondTrap& DiamondTrap::operator=(DiamondTrap const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, DiamondTrap const& i)
-{
-    // o << "Value = " << i.getValue();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

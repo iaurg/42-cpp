@@ -40,6 +40,4 @@ protected:
     int _attackDamage;
 };
 
-std::ostream& operator<<(std::ostream& o, ClapTrap const& i);
-
 #endif /* ******************************************************** CLAPTRAP_H */

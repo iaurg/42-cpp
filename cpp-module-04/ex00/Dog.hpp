@@ -16,6 +16,4 @@ public:
     virtual void makeSound(void) const;
 };
 
-std::ostream& operator<<(std::ostream& o, Dog const& i);
-
 #endif /* ************************************************************* DOG_H */

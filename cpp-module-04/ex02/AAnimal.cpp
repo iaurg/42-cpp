@@ -38,12 +38,6 @@ AAnimal& AAnimal::operator=(AAnimal const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, AAnimal const& i)
-{
-    o << "Animal of = " << i.getType();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

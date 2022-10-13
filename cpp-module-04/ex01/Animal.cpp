@@ -41,12 +41,6 @@ Animal& Animal::operator=(Animal const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, Animal const& i)
-{
-    o << "Animal of = " << i.getType();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

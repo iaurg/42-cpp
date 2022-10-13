@@ -54,12 +54,6 @@ FragTrap& FragTrap::operator=(FragTrap const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, FragTrap const& i)
-{
-    // o << "Value = " << i.getValue();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

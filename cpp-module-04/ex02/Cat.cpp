@@ -40,12 +40,6 @@ Cat& Cat::operator=(Cat const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, Cat const& i)
-{
-    // o << "Value = " << i.getValue();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

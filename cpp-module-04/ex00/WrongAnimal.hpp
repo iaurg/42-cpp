@@ -21,6 +21,4 @@ protected:
     std::string type;
 };
 
-std::ostream& operator<<(std::ostream& o, WrongAnimal const& i);
-
 #endif /* ********************************************************** WRONGANIMAL_H */

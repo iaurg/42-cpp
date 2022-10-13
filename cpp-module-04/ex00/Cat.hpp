@@ -16,6 +16,4 @@ public:
     virtual void makeSound(void) const;
 };
 
-std::ostream& operator<<(std::ostream& o, Cat const& i);
-
 #endif /* ************************************************************* CAT_H */

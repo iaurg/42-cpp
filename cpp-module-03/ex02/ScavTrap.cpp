@@ -54,12 +54,6 @@ ScavTrap& ScavTrap::operator=(ScavTrap const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, ScavTrap const& i)
-{
-    // o << "Value = " << i.getValue();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

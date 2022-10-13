@@ -41,12 +41,6 @@ Dog& Dog::operator=(Dog const& rhs)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& o, Dog const& i)
-{
-    // o << "Value = " << i.getValue();
-    return o;
-}
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */

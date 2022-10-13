@@ -21,6 +21,4 @@ private:
     std::string _name;
 };
 
-std::ostream& operator<<(std::ostream& o, DiamondTrap const& i);
-
 #endif /* ***************************************************** DIAMONDTRAP_H */

@@ -18,6 +18,4 @@ public:
 private:
 };
 
-std::ostream& operator<<(std::ostream& o, WrongCat const& i);
-
 #endif /* ************************************************************* WrongCAT_H */
