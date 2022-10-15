@@ -1,22 +1,45 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
-    Bureaucrat b1("b1", 1);
-    Bureaucrat b2("b2", 150);
-    Form f1("f1", 1, 1);
-    Form f2("f2", 150, 150);
+    Bureaucrat bob("Bob", 100);
+    Bureaucrat lenny("Lenny", 50);
+    Bureaucrat jenny("Jenny", 5);
+    ShrubberyCreationForm sForm("Townhall");
+    RobotomyRequestForm rForm("R2D2");
+    PresidentialPardonForm pForm("Zizou");
 
-    std::cout << b1 << std::endl;
-    std::cout << b2 << std::endl;
-    std::cout << f1 << std::endl;
-    std::cout << f2 << std::endl;
+    std::cout << bob << std::endl;
+    std::cout << lenny << std::endl;
+    std::cout << jenny << std::endl;
+    std::cout << sForm << std::endl;
+    std::cout << rForm << std::endl;
+    std::cout << pForm << std::endl;
 
-    b1.signForm(f1);
-    b2.signForm(f2);
-    b1.signForm(f2);
-    b2.signForm(f1);
-
-    return 0;
+    bob.signForm(sForm);
+    std::cout << std::endl;
+    bob.executeForm(sForm);
+    std::cout << std::endl;
+    bob.signForm(rForm);
+    std::cout << std::endl;
+    lenny.signForm(rForm);
+    std::cout << std::endl;
+    lenny.executeForm(rForm);
+    std::cout << std::endl;
+    jenny.executeForm(rForm);
+    std::cout << std::endl;
+    jenny.executeForm(rForm);
+    std::cout << std::endl;
+    jenny.executeForm(rForm);
+    std::cout << std::endl;
+    jenny.executeForm(pForm);
+    std::cout << std::endl;
+    jenny.signForm(pForm);
+    std::cout << std::endl;
+    jenny.executeForm(pForm);
+    std::cout << std::endl;
+    return (0);
 }

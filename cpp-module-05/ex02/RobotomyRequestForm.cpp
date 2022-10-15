@@ -4,12 +4,17 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-RobotomyRequestForm::RobotomyRequestForm()
+RobotomyRequestForm::RobotomyRequestForm(const std::string target)
+    : AForm("RobotomyRequestForm", 72, 45)
+    , _target(target)
 {
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& src)
+    : AForm(src)
+    , _target(src._target)
 {
+    *this = src;
 }
 
 /*
@@ -26,22 +31,29 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const& rhs)
 {
-    // if ( this != &rhs )
-    //{
-    // this->_value = rhs.getValue();
-    //}
+    if (this != &rhs) {
+        this->_target = rhs.getTarget();
+    }
     return *this;
-}
-
-std::ostream& operator<<(std::ostream& o, RobotomyRequestForm const& i)
-{
-    // o << "Value = " << i.getValue();
-    return o;
 }
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+
+std::string RobotomyRequestForm::getTarget() const
+{
+    return _target;
+}
+
+void RobotomyRequestForm::execute(Bureaucrat const& executor) const
+{
+    std::cout << "BIP BOP [*.*]" << std::endl;
+    if (rand() % 2 == 0)
+        std::cout << _target << " has been robotomized successfully" << std::endl;
+    else
+        std::cout << _target << " robotomy has been failed" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
