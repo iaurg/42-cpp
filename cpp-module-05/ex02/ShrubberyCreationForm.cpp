@@ -41,26 +41,6 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 ** --------------------------------- METHODS ----------------------------------
 */
 
-static void writeTreeOnFile(std::ofstream file)
-{
-    file << "          .     .  .      +     .      .          ." << std::endl;
-    file << "     .       .      .     #       .           ." << std::endl;
-    file << "        .      .         ###            .      .      ." << std::endl;
-    file << "      .      .   \"#:. .:##\"##:. .:#\"  .      ." << std::endl;
-    file << "          .      . \"####\"###\"####\"  ." << std::endl;
-    file << "       .     \"#:.    .:#\"###\"#:.    .:#\"  .        .       ." << std::endl;
-    file << "  .             \"#########\"#########\"        .        ." << std::endl;
-    file << "        .    \"#:.  \"####\"###\"####\"  .:#\"   .       ." << std::endl;
-    file << "     .     .  \"#######\"\"##\"##\"\"#######\"                  ." << std::endl;
-    file << "                .\"##\"#####\"#####\"##\"           .      ." << std::endl;
-    file << "    .   \"#:. ...  .:##\"###\"###\"##:.  ... .:#\"     ." << std::endl;
-    file << "      .     \"#######\"##\"#####\"##\"#######\"      .     ." << std::endl;
-    file << "    .    .     \"#####\"\"#######\"\"#####\"    .      ." << std::endl;
-    file << "            .     \"      000      \"    .     ." << std::endl;
-    file << "       .         .   .   000     .        .       ." << std::endl;
-    file << ".. .. ..................O000O........................ ...... ..." << std::endl;
-}
-
 void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
 {
     std::ofstream file;
