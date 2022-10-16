@@ -52,7 +52,7 @@ std::ostream& operator<<(std::ostream& o, AForm const& i)
     else
         o << "not signed";
     o << " and requires a grade of " << i.getGradeToSign() << " to sign and "
-      << i.getGradeToExecute() << " to execute.";
+      << i.getGradeToExecute() << " to execute." << std::endl;
     return o;
 }
 
