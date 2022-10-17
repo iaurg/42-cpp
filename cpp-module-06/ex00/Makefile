@@ -1,4 +1,4 @@
-NAME = bureaucrat
+NAME = conversion
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98

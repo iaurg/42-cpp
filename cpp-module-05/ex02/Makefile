@@ -1,6 +1,6 @@
 NAME = 28b
 
-CC = clang++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 REMOVE = rm -rf
