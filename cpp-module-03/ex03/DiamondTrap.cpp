@@ -5,6 +5,10 @@
 */
 
 DiamondTrap::DiamondTrap()
+    : ClapTrap()
+    , FragTrap()
+    , ScavTrap()
+
 {
     std::cout << CYAN << "[DiamondTrap]" << RESET << " default constructor called" << std::endl;
     this->_name = "Default Diamond";
@@ -62,11 +66,6 @@ DiamondTrap& DiamondTrap::operator=(DiamondTrap const& rhs)
 void DiamondTrap::whoAmI(void)
 {
     std::cout << CYAN << "[DiamondTrap]" << RESET << " " << this->_name << " is " << ClapTrap::_name << std::endl;
-}
-
-void DiamondTrap::attack(std::string const& target)
-{
-    ScavTrap::attack(target);
 }
 
 /*

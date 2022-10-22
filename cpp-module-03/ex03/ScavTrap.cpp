@@ -72,9 +72,12 @@ void ScavTrap::attack(std::string const& target)
 
 void ScavTrap::guardGate(void)
 {
-    std::cout << RED << "[ScavTrap] " << RESET
-              << this->getName() << " has entered in Gate keeper mode"
-              << std::endl;
+    if (this->checkCanAct()) {
+        std::cout << RED << "[ScavTrap] " << RESET
+                  << this->getName()
+                  << " has entered in Gate keeper mode"
+                  << std::endl;
+    }
 }
 
 /*
