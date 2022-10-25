@@ -1,5 +1,4 @@
 #include "Converter.hpp"
-
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
@@ -38,41 +37,77 @@ Converter& Converter::operator=(Converter const& rhs)
 ** --------------------------------- METHODS ----------------------------------
 */
 
-std::string Converter::getInput() const
+static float toTreatableFloat(std::string& str)
 {
-    return this->_input;
+    float result = 0;
+    result = atof(str.c_str());
+    return result;
 }
 
-std::string Converter::convertToChar(void)
+void Converter::convertToChar(void)
 {
     std::string str = this->getInput();
 
-    return str;
+    float f = toTreatableFloat(str);
+    int i = static_cast<int>(f);
+
+    if (f < 0 || f > 127 || std::isnan(f) || std::isinf(f)) {
+        std::cout << "char: impossible" << std::endl;
+    } else if (f < 32 || f > 126) {
+        std::cout << "char: Non displayable" << std::endl;
+    } else {
+        std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
+    }
 }
 
-int Converter::convertToInt(void)
+void Converter::convertToInt(void)
 {
     std::string str = this->getInput();
 
-    return 42;
+    float f = toTreatableFloat(str);
+
+    if (f < INT_MIN || f > INT_MAX || std::isnan(f) || std::isinf(f)) {
+        std::cout << "int: impossible" << std::endl;
+    } else {
+        std::cout << "int: " << static_cast<int>(f) << std::endl;
+    }
 }
 
-float Converter::convertToFloat(void)
+void Converter::convertToFloat(void)
 {
     std::string str = this->getInput();
 
-    return 42.0;
+    float f = toTreatableFloat(str);
+
+    if (f < -FLT_MAX || f > FLT_MAX) {
+        std::cout << "float: impossible" << std::endl;
+    } else {
+        std::cout << "float: " << std::fixed << std::setprecision(1) << f
+                  << "f" << std::endl;
+    }
 }
 
-double Converter::convertToDouble(void)
+void Converter::convertToDouble(void)
 {
     std::string str = this->getInput();
 
-    return 42.0;
+    float f = toTreatableFloat(str);
+
+    if (f < -DBL_MAX || f > DBL_MAX) {
+        std::cout << "double: impossible" << std::endl;
+    } else {
+        std::cout << "double: " << std::fixed << std::setprecision(1) << f
+                  << std::endl;
+    }
 }
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
+
+std::string Converter::getInput() const
+{
+    return this->_input;
+}
 
 /* ************************************************************************** */

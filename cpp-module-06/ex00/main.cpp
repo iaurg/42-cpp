@@ -11,8 +11,8 @@ int main(int argc, char** argv)
 
     Converter holder(str);
 
-    std::cout << "char: " << holder.convertToChar() << std::endl;
-    std::cout << "int: " << holder.convertToInt() << std::endl;
-    std::cout << "float: " << holder.convertToFloat() << std::endl;
-    std::cout << "double: " << holder.convertToDouble() << std::endl;
+    holder.convertToChar();
+    holder.convertToInt();
+    holder.convertToFloat();
+    holder.convertToDouble();
 }
