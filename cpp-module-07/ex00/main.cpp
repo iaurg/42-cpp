@@ -2,10 +2,8 @@
 
 int main(void)
 {
-    Print(1);
-    Print(1.0f);
-    Print(1.0);
-    Print("1");
-    Print("1.0");
-    Print("Test");
+    MyArray<int, 9> array;
+    array[0] = 42;
+    std::cout << array.getSize() << std::endl;
+    std::cout << array[0] << std::endl;
 }
