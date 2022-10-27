@@ -49,7 +49,6 @@ void Converter::convertToChar(void)
     std::string str = this->getInput();
 
     float f = toTreatableFloat(str);
-    int i = static_cast<int>(f);
 
     if (f < 0 || f > 127 || std::isnan(f) || std::isinf(f)) {
         std::cout << "char: impossible" << std::endl;
