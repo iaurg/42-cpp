@@ -4,21 +4,24 @@
 #include <iostream>
 #include <string>
 
-template <typename T, int SIZE>
-class MyArray {
-private:
-    T _array[SIZE];
+template <typename A, typename B>
+void Swap(A& a, B& b)
+{
+    A tmp = a;
+    a = b;
+    b = tmp;
+}
 
-public:
-    int getSize() const
-    {
-        return SIZE;
-    }
+template <typename A, typename B>
+A& Min(A& a, B& b)
+{
+    return (a < b ? a : b);
+}
 
-    T& operator[](int index)
-    {
-        return _array[index];
-    }
-};
+template <typename A, typename B>
+A& Max(A& a, B& b)
+{
+    return (a > b ? a : b);
+}
 
 #endif /* ************************************************************ WHATEVER_H */
