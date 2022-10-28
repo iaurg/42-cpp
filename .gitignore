@@ -34,3 +34,5 @@
 *.pdf
 
 .vscode
+test.txt
+sed.sh
