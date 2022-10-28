@@ -5,7 +5,7 @@
 #include <string>
 
 template <typename A, typename B>
-void Swap(A& a, B& b)
+void swap(A& a, B& b)
 {
     A tmp = a;
     a = b;
@@ -13,13 +13,13 @@ void Swap(A& a, B& b)
 }
 
 template <typename A, typename B>
-A& Min(A& a, B& b)
+A& min(A& a, B& b)
 {
     return (a < b ? a : b);
 }
 
 template <typename A, typename B>
-A& Max(A& a, B& b)
+A& max(A& a, B& b)
 {
     return (a > b ? a : b);
 }
