@@ -4,19 +4,31 @@
 #include <iostream>
 #include <string>
 
+template <typename T>
 class Array {
+    class OutOfRange : public std::exception {
+    public:
+        virtual const char* what() const throw();
+    };
 
 public:
     Array();
+    Array(unsigned int n);
     Array(Array const& src);
     ~Array();
 
-    Array& operator=(Array const& rhs);
+    T& operator[](unsigned int n);
+    T& operator=(Array const& rhs);
     int size() const;
 
 private:
+    T* _array;
+    unsigned int _size;
 };
 
-std::ostream& operator<<(std::ostream& o, Array const& i);
+template <typename T>
+std::ostream& operator<<(std::ostream& out, Array<T> const& rhs);
+
+#include "Array.tpp"
 
 #endif /* *********************************************************** ARRAY_H */
