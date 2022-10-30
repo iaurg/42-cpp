@@ -89,6 +89,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (checkCanAct()) {
         std::cout << "ClapTrap " << _name << " is repaired by " << amount << " points!" << std::endl;
+        setEP(_energyPoints - 1);
         setHP(getHP() + amount);
     }
 }
