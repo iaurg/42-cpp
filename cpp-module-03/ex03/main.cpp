@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 17:41:50 by aalleon           #+#    #+#             */
-/*   Updated: 2022/10/22 14:44:37 by itaureli         ###   ########.fr       */
+/*   Updated: 2022/10/30 09:07:30 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ int main()
 {
     {
         DiamondTrap tom("Thomas");
+        std::cout << "Thomas AD: " << tom.getAD() << std::endl;
+        std::cout << "Thomas HP: " << tom.getHP() << std::endl;
+        std::cout << "Thomas EP: " << tom.getEP() << std::endl;
     }
+
     std::cout << std::endl;
     {
         DiamondTrap norb("Norbert");
