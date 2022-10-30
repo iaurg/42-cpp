@@ -60,7 +60,9 @@ FragTrap& FragTrap::operator=(FragTrap const& rhs)
 
 void FragTrap::highFivesGuys(void)
 {
-    std::cout << GREEN << "[FragTrap]" << RESET << " " << _name << " high fives guys 🙏" << std::endl;
+    if (this->checkCanAct()) {
+        std::cout << GREEN << "[FragTrap]" << RESET << " " << _name << " high fives guys 🙏" << std::endl;
+    }
 }
 
 /*
