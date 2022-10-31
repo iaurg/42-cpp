@@ -10,10 +10,10 @@ class WrongCat : public WrongAnimal {
 public:
     WrongCat();
     WrongCat(WrongCat const& src);
-    virtual ~WrongCat();
+    ~WrongCat();
 
     WrongCat& operator=(WrongCat const& rhs);
-    virtual void makeSound(void) const;
+    void makeSound(void) const;
 
 private:
 };
