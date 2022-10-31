@@ -22,7 +22,7 @@ Brain::Brain()
 
     // Fill ideas with random strings
     for (int i = 0; i < 100; i++) {
-        ideas[i] = quotes[rand() % 10];
+        this->_ideas[i] = quotes[rand() % 10];
     }
 
     std::cout << "[Brain] default constructor called" << std::endl;
@@ -59,7 +59,7 @@ Brain& Brain::operator=(Brain const& rhs)
 
 void Brain::getIdea(int index) const
 {
-    std::cout << "[Brain] Idea: " << ideas[index] << std::endl;
+    std::cout << "[Brain] Idea: " << this->_ideas[index] << std::endl;
 }
 
 /*
