@@ -33,5 +33,16 @@ int main(void)
             delete animals[i];
         }
     }
+    {
+        Cat* cat = new Cat();
+        std::cout << "Cat's type: " << cat->getType() << std::endl;
+        cat->makeSound();
+
+        // print cat ideas
+        for (int i = 0; i < 101; i++) {
+            cat->getBrain()->getIdea(i);
+        }
+        delete cat;
+    }
     return 0;
 }
