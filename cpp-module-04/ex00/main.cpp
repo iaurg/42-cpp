@@ -20,11 +20,21 @@ int main()
         delete dog;
         delete cat;
     }
-
+    std::cout << std::endl;
+    std::cout << std::endl;
     {
-        std::cout << std::endl;
-        std::cout << std::endl;
+        const WrongAnimal* animal = new WrongAnimal();
+        const WrongAnimal* cat = new WrongCat();
+        std::cout << cat->getType() << " " << std::endl;
+        cat->makeSound();
+        animal->makeSound();
 
+        delete animal;
+        delete cat;
+    }
+    std::cout << std::endl;
+    std::cout << std::endl;
+    {
         const WrongAnimal* wrongAnimal = new WrongAnimal();
         const WrongAnimal* wrongCat = new WrongCat();
         const WrongCat* trueCat = new WrongCat();
