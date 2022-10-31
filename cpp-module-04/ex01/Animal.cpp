@@ -8,7 +8,6 @@ Animal::Animal()
 {
     std::cout << "[Animal] default constructor called" << std::endl;
     this->type = "Animal";
-    brain = new Brain();
 }
 
 Animal::Animal(const Animal& src)
@@ -24,7 +23,6 @@ Animal::Animal(const Animal& src)
 Animal::~Animal()
 {
     std::cout << "[Animal] " << this->type << " destroyed" << std::endl;
-    delete brain;
 }
 
 /*
@@ -36,7 +34,6 @@ Animal& Animal::operator=(Animal const& rhs)
     std::cout << "[Animal] assignation operator called" << std::endl;
     if (this != &rhs) {
         this->type = rhs.getType();
-        this->brain = new Brain(*rhs.brain);
     }
     return *this;
 }
@@ -62,11 +59,6 @@ const std::string Animal::getType() const
 void Animal::setType(std::string type)
 {
     this->type = type;
-}
-
-Brain& Animal::getBrain() const
-{
-    return *this->brain;
 }
 
 /* ************************************************************************** */

@@ -16,11 +16,9 @@ public:
     const std::string getType(void) const;
     void setType(std::string type);
     virtual void makeSound(void) const;
-    Brain& getBrain(void) const;
 
 protected:
     std::string type;
-    Brain* brain;
 };
 
 #endif /* ********************************************************** ANIMAL_H */
