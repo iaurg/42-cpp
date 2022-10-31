@@ -1,5 +1,5 @@
-#ifndef WrongCAT_HPP
-#define WrongCAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
 #include "WrongAnimal.hpp"
 #include <iostream>
@@ -18,4 +18,4 @@ public:
 private:
 };
 
-#endif /* ************************************************************* WrongCAT_H */
+#endif /* ************************************************************* WRONGCAT_H */
