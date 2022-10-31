@@ -59,7 +59,12 @@ Brain& Brain::operator=(Brain const& rhs)
 
 void Brain::getIdea(int index) const
 {
-    std::cout << "[Brain] Idea: " << this->_ideas[index] << std::endl;
+    if (index < 0 || index > 99) {
+        std::cout << "Index out of bounds, brain overload!" << std::endl;
+        return;
+    } else {
+        std::cout << "[Brain] Idea: " << this->_ideas[index] << std::endl;
+    }
 }
 
 /*
