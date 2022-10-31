@@ -12,10 +12,10 @@ public:
     ~Brain();
 
     Brain& operator=(Brain const& rhs);
-    std::string ideas[100];
     void getIdea(int i) const;
 
 private:
+    std::string _ideas[100];
 };
 
 #endif /* *********************************************************** BRAIN_H */
