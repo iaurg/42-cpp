@@ -21,3 +21,10 @@ Stack:
 
 - is managed by compiler.
 - allocated in continuos block
+
+STL: Standard Template Library
+
+container: data structures
+algorithm: operations
+
+Algorithms -> Iterator -> Container
