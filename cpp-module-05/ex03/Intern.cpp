@@ -45,7 +45,7 @@ AForm* Intern::_makeRobotomyRequestForm(std::string const& target)
 
 AForm* Intern::_makeShrubberyCreationForm(std::string const& target)
 {
-    return new ShrubberyCreationForm("XXXXX");
+    return new ShrubberyCreationForm(target);
 }
 
 AForm* Intern::makeForm(std::string const& name, std::string const& target)
@@ -73,7 +73,7 @@ AForm* Intern::makeForm(std::string const& name, std::string const& target)
 
 const char* Intern::FormNotCreated::what() const throw()
 {
-    return "Form cannot be created";
+    return "Form cannot be created by Intern";
 }
 
 /*

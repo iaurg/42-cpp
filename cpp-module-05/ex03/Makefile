@@ -1,4 +1,4 @@
-NAME = 28b
+NAME = beats
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98

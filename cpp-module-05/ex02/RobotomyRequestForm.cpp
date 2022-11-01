@@ -49,7 +49,8 @@ std::string RobotomyRequestForm::getTarget() const
 void RobotomyRequestForm::execute(Bureaucrat const& executor) const
 {
     std::cout << "BIP BOP [*.*]" << std::endl;
-    if (rand() % 2 == 0)
+    std::srand(std::time(NULL)); // use current time as seed for random generator
+    if (std::rand() % 2 == 0)
         std::cout << _target << " has been robotomized successfully" << std::endl;
     else
         std::cout << _target << " robotomy has been failed" << std::endl;
