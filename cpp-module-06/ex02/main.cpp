@@ -7,6 +7,7 @@ int main(void)
         A* a = new A();
         identify(a);
         identify(*a);
+        delete a;
     }
 
     std::cout << std::endl;
@@ -16,6 +17,7 @@ int main(void)
         Base* base = new Base();
         identify(base);
         identify(*base);
+        delete base;
     }
 
     std::cout << std::endl;
@@ -25,6 +27,7 @@ int main(void)
         Base* random = generate();
         identify(random);
         identify(*random);
+        delete random;
     }
 
     return (0);
