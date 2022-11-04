@@ -17,5 +17,7 @@ int main(void)
     std::cout << "data after PTR: " << data << std::endl;
     std::cout << "Data after deserialize: " << *other << std::endl;
 
+    delete data;
+
     return 0;
 }
