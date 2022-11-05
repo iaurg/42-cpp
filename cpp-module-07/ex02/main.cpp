@@ -58,5 +58,18 @@ int main(void)
         }
     }
 
+    {
+        unsigned int size = 5;
+        Array<int> a(size);
+        Array<int> b = a;
+
+        for (int i = 0; i < size; i++) {
+            a[i] = i;
+            b[i] = i + 1;
+        }
+        printArray(a);
+        printArray(b);
+    }
+
     return 0;
 }

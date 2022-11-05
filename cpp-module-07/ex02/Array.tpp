@@ -40,7 +40,7 @@ Array<T>::~Array()
 */
 
 template <typename T>
-T& Array<T>::operator=(Array const& rhs)
+Array<T>& Array<T>::operator=(Array const& rhs)
 {
     if (this != &rhs) {
         _size = rhs._size;
@@ -63,7 +63,7 @@ template <typename T>
 std::ostream& operator<<(std::ostream& out, Array<T> const& rhs)
 {
     for (unsigned int i = 0; i < rhs.size(); i++)
-        out << rhs[i] << " ";
+        out << rhs[i] << " " << std::endl;
     return out;
 }
 

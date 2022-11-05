@@ -18,7 +18,7 @@ public:
     ~Array();
 
     T& operator[](unsigned int n);
-    T& operator=(Array const& rhs);
+    Array<T>& operator=(Array const& rhs);
     int size() const;
 
 private:
